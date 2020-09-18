@@ -1,0 +1,26 @@
+#tbl_perpisahan
+#	- id
+#	- pasangan_id
+#	- tanggal_pisah
+#
+#tbl_pasangan
+#	- id
+#	- penduduk_id
+#	- pasangan_id
+#	_ tanggal_jadian
+#
+#tbl_ penduduk
+#	- id
+#	- nama
+#	- tempat_tinggal
+#	- tanggal_lahir
+#
+#soalnya
+#- cari 100 penduduk yang paling recent berpisah
+#
+#Query SQL:
+
+SELECT tbl_penduduk.* FROM tbl_penduduk LEFT JOIN tbl_pasangan ON tbl_penduduk.id = tbl_pasangan.penduduk_id left join tbl_perpisahan ON tbl_pasangan.pasangan_id = tbl_perpisahan.pasangan_id ORDER BY tbl_perpisahan.tanggal_pisah DESC LIMIT 100
+
+#
+#Mohon Maaf saya hanya membuatkan query sql.
